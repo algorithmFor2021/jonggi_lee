@@ -2,7 +2,6 @@ package P210424;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 //백준 - 도영이가 만든 맛있는 음식
