@@ -1,4 +1,4 @@
-package P210424;
+
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -37,7 +37,7 @@ public class P2529{
             }
         }
     }
- 
+	
 	public static boolean ck(int a, int b, char c) {
         if (c == '<') {
             if (a > b) return false;
@@ -62,8 +62,6 @@ public class P2529{
 		}
 		
 		DFS("", 0);
-		
-		
 		
 		br.close();
 	}

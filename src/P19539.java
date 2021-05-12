@@ -24,7 +24,7 @@ public class P19539 {
 			total += num;
 			cnt += num/2;
 		}
-		
+		//뒤 조건문은 이해가 잘 안됨
 		if(total%(w1+w2) == 0 && cnt>= total/(w1+w2)) {
 			ans = "YES";
 		} else {
