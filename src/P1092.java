@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
-
+//백준 - 그리디 - 배
 public class P1092{
 
 	static int N; //크레인, 1분에 하나씩 배에 실을 수 있다.

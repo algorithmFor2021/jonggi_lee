@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-
+//백준 - 그리디 - 사과나무
 public class P19539 {
 
 	static int N; //사과나무의 개수

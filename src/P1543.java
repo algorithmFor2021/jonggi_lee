@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-//백준 - 문서 검색
+//백준 - 브루트포스 - 문서 검색
 public class P1543 {
 	static String doc;
 	static String word;

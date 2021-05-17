@@ -1,3 +1,4 @@
+package notyet;
 
 
 import java.io.FileInputStream;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 
 // 백준 - 감소하는 수
 // 브루트포스 알고리즘 / 백트래킹
+// 못품
 public class P1038{
 	static int N;
 	
