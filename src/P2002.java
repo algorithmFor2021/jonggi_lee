@@ -7,14 +7,16 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 // 백준 - 문자열 - 추월
-// 헷갈렸던 문제
-// 예를 들어 C-D-B-E-A의 경우, C가 A,B를 추월했거, D가 A,B를 추월했고, B와 E가 A를 추월했으니 6인지
-// 아니면 추월이라는 행위를 한 차량 댓수를 구해야 하는지 헷갈렸음
+// 문제 이해를 못해 생각보다 오래 걸렸다.
+// 예를 들어 B-C-E-D-A 순으로 나갈 경우
+// A를 4대가 추월했으니 4, E를 E가 추월했으니 1
+// 즉, 5로 계산 해야하는지, 아니면 그냥 추월이라는 행위를 한 댓수인 4를 구해야 하는지 헷갈렸다.
+// 아래의 코드도 차량 대수가 1,000이하 이기 때문에 가능하지, 더 큰 범위일 경우 중복으로 검색하는 구간이 많기 때문에 타임아웃 발생할 거라 예상된다.
 public class P2002 {
     static int N, CNT;
 	public static void main(String[] args) throws IOException {
-		System.setIn(new FileInputStream("D:\\eclipse\\workspace\\Study\\WebContent\\P2002.txt"));
-        Scanner sc = new Scanner(System.in);
+        System.setIn(new FileInputStream("E:\\WebProject\\newworkspace\\algo\\input\\P2002.txt"));
+		Scanner sc = new Scanner(System.in);
         N = sc.nextInt();sc.nextLine();
         
         Map<String, Integer> in = new LinkedHashMap();
