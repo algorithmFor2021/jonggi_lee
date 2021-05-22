@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +17,8 @@ public class P1213 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Map<Character, Integer> m = new HashMap();
         
-        String msg = "I'm Sorry Hansoo";
+        boolean flag = true;
+        String msg = "";
         char[] name = br.readLine().toCharArray();
         
         for(int i =0;i < name.length;i++) {
@@ -29,17 +31,34 @@ public class P1213 {
         int backward = name.length-1;
 
         for(char c : m.keySet()) {
-            for(int i=0;i < m.get(c);i++) {
-
-            }
-            if(m.get(c) > 1) {
+            while(m.get(c) > 1) {
                 pel[forward++] = c;
                 pel[backward--] = c;
                 m.put(c, m.get(c)-2);
-            } 
+            }
         }
 
-        System.out.println(msg);
+        int cnt = 0;
+        for(char c : m.keySet()) {
+            if(m.get(c) > 0) {
+                pel[forward] = c;
+                cnt++;
+                msg = "";
+            }
+            if(cnt > 1) {
+                flag = false;
+                break;
+            }
+        }
+
+        if(flag) {
+            for(char c : pel)
+                msg += c;
+            System.out.println(msg);
+        } else {
+            System.out.println("I'm Sorry Hansoo");
+        }
+        
 	}	
 }
 
