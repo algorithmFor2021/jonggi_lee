@@ -3,13 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
 import java.util.StringTokenizer;
-import java.util.stream.IntStream;
 
 // 백준 - 문자열 - 뒤집힌 계산기
 // 스택에 넣어 계산 필요
@@ -17,6 +11,11 @@ import java.util.stream.IntStream;
 // 숫자와 부호 분리 위해
 // 입력 받은 문자열에서 기호를 replace 처리 하여 분리
 // 입력 받은 문자열에서 기호만 따로 추출
+// 문제해결 방법1
+// 중위표현을 후위표현으로
+// 중위, 후위 알고리즘 공부
+// 문제해결 방법2
+// 수식 파서 트리
 public class P20129 {
     static int N, CNT;
 
@@ -38,7 +37,8 @@ public class P20129 {
             else
                 sign[n] = "/";
         }
-        
+        String abc="0003";
+        System.out.println(Integer.parseInt(abc));
         //char[] susic = new StringBuilder(br.readLine()).reverse().toString().toCharArray();
 
        // for(int i=0;i<susic.length;i++) {

@@ -3,8 +3,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Comparator;
  
+// 백준 - 문자열 - 전화번호 목록
+// trie 자료구조 이용
+// kmp 알고리즘 공부 필요
 class P5052 {
     static int N;
     static String ans;
@@ -17,12 +19,12 @@ class P5052 {
         for(int i=0;i<N;i++) {
             int t = Integer.parseInt(br.readLine());
             String[] arr = new String[t];
-            ans = "YES";      
+            ans = "YES";
 
             for(int j=0;j<t;j++) {
                 arr[j]=br.readLine();
             }
-
+            
             Arrays.sort(arr);
 
             for(int j=1;j<t;j++) {
