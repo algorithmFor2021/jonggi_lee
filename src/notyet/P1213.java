@@ -43,7 +43,6 @@ public class P1213 {
             if(m.get(c) > 0) {
                 pel[forward] = c;
                 cnt++;
-                msg = "";
             }
             if(cnt > 1) {
                 flag = false;
