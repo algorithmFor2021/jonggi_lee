@@ -65,6 +65,7 @@ public class P1647 {
                 parent[start] = end;
             else
                 parent[end] = start;
+                
             lastCost = node.cost;
             MIN += node.cost;
         }

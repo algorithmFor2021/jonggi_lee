@@ -11,7 +11,7 @@ public class P1743 {
     static int N, M, K;
     static int[][] path;
     static int MAX;
-
+    
     static class Pos {
         int x;
         int y;
