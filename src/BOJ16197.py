@@ -46,5 +46,5 @@ if __name__ == "__main__":
                 position.append(i)
                 position.append(j)
     
-    coin.append((position[0], position[1], position[2], position[3], 0))
+    coin.append((position[0], position[1], position[2], position[3], 1))
     print(BFS())
