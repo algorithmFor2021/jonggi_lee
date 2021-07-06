@@ -6,6 +6,7 @@ import java.util.StringTokenizer;
 
 //백준 - 스타트와 링크
 //브루트포스
+//조합 nCk (k는 n/2명)
 public class BOJ14889 {
 	static int N;
 	static int[] team;
