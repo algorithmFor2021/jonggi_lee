@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //백준 - 적록색약
-//깊이,너비우선탐색
+//깊이우선탐색
 //메모리 초과 이슈 발생 - 방문 여부 체크시 큐에서 꺼낼때 체크하지 않고 큐에 넣을때 체크
 public class BOJ10026 {
 	static int N; //1 <= N <= 100
