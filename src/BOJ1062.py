@@ -1,11 +1,10 @@
-# 백준 - 가르침
 import sys
 # 문자열, 완전탐색(브루트포스)
 # python3로 하면 시간 초과 발생, pypy3는 통과함.
 # 간단한 코드상에서는 Python3가 메모리, 속도 측에서 우세
 # 복잡한 코드(반복)을 사용하는 경우에서는 PyPy3가 우세
-# 조합은 비트마스크
 sys.stdin = open("E:/WebProject/newworkspace/algo/input/1062.txt","r")
+
 
 def dfs(idx, cnt):
     global maxRead

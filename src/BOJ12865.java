@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //백준 - 평범한 배낭
-//DP
+//DP, 배낭
 //memorization 이용, DFS 이용시 시간 초과 발생할 수 있다.
 public class BOJ12865 {
 	static int N; //1<=N<=100       물품의 수
