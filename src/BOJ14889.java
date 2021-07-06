@@ -18,7 +18,6 @@ public class BOJ14889 {
 		if ( cnt >= N/2) {
 			start = teamAbilitySum(1);
 			link = teamAbilitySum(0);
-			// System.out.println(Arrays.toString(team) +","+start+","+link);
 			MIN = Math.min(MIN, Math.abs(start - link));
 			
 			return;
