@@ -1,4 +1,5 @@
 # 백준 - 단어수학(그리디)
+# 그리디
 import sys
 
 sys.stdin = open("D:/eclipse/workspace/Study/WebContent/P1339.txt", 'r')
