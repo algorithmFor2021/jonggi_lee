@@ -42,6 +42,8 @@ public class BOJ12865 {
 			}
 		}
 
+		for(int i=1;i<=N;i++) { //물건갯수
+		}
 		System.out.println(max);
 	}
 }
