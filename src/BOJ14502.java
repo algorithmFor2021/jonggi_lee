@@ -10,7 +10,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 //백준 - 연구소
-//그래프, 브루트포스, 너비우선
+//그래프, 브루트포스, 
 
 // 바이러스는 상하좌우로 퍼져나갈 수 있다,
 // 새로 세울 수 있는 벽의 개수는 3개이다.
