@@ -1,4 +1,4 @@
-package notyet;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,42 +7,46 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-// 백준 - 문자열 - 팰린드롬 만들기
-// 푸는중
+// 백준 - 팰린드롬 만들기
+//문자열
+//문제의 키포인트는 정답이 여러 개일 경우 사전순으로 앞서는 것을 출력해야 한다.
+//즉 문자열 생성시 사전순으로 앞서는 것들을 우선적으로 배치해야 한다.
 public class P1213 {
     static int N, CNT;
 
 	public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("D:\\eclipse\\workspace\\Study\\WebContent\\P1213.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Map<Character, Integer> m = new HashMap();
-        
+
+        char name[] = br.readLine().toCharArray();
+
+        int chrCnt[] = new int[26];
         boolean flag = true;
         String msg = "";
-        char[] name = br.readLine().toCharArray();
         
         for(int i =0;i < name.length;i++) {
-            m.put(name[i], m.getOrDefault(name[i], 0)+1);
+            chrCnt[name[i]-65]++;
         }
-
+        
         char[] pel = new char[name.length];
 
         int forward = 0;
         int backward = name.length-1;
 
-        for(char c : m.keySet()) {
-            while(m.get(c) > 1) {
-                pel[forward++] = c;
-                pel[backward--] = c;
-                m.put(c, m.get(c)-2);
+        for(int i =0;i < chrCnt.length;i++) {
+            while(chrCnt[i] > 1) {
+                pel[forward++] = (char)(i+65);
+                pel[backward--] = (char)(i+65);
+                chrCnt[i] -= 2;
             }
         }
 
         int cnt = 0;
-        for(char c : m.keySet()) {
-            if(m.get(c) > 0) {
-                pel[forward] = c;
+        for(int i =0;i < chrCnt.length;i++) {
+            if(chrCnt[i] > 0) {
+                pel[forward] = (char)(i+65);
                 cnt++;
+                chrCnt[i]--;
             }
             if(cnt > 1) {
                 flag = false;
@@ -60,14 +64,3 @@ public class P1213 {
         
 	}	
 }
-
-/*
-문자의 개수 = 2 => 앞뒤로 넣는다. 0
-           > 2 => 앞뒤로 넣고 -2, 2보다 크면 또 앞뒤로 넣고 -2
-           < 2 => 대기
-한사이클 돈다.
-2이상인 문자가 있는지 확인
-없다면 문자가 1개인 갯수 체크 => > 1 => 팰린드롬 성립 안됨
-                               == 1 => 가운데 넣는다.
-
-*/
